@@ -1,0 +1,6 @@
+
+Warning: PHP Startup: curl: Unable to initialize module
+Module compiled with module API=20190902
+PHP    compiled with module API=20210902
+These options need to match
+ in Unknown on line 0

@@ -4,11 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TodolistController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TaskController;
-<<<<<<< HEAD
 use App\Http\Controllers\ApiController;
-=======
-use App\Http\Controllers\SettingsController;
->>>>>>> 8c07b4c38459e4d764b8079056e9643531303664
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -68,7 +64,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('task/sendEmail',[TaskController::class,'sendEmail'])->name('task.sendEmail');
     Route::get('task/userattach',[TaskController::class,'userattach'])->name('task.userattach');
 
-    Route::get('/settings', [SettingsController::class,'index']);
+
 });
 Route::get('/settings', [SettingsController::class,'index']);
 Route::middleware('throttle:5,1')->get('task/ratelimiter',[TaskController::class,'ratelimiter'])->name('task.ratelimiter');
